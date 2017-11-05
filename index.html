@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anytime Train</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"> -->
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-D9XILkoivXN+bcvB2kSOowkIvIcBbNdoDQvfBNsxYAIieZbx8/SI4NeUvrRGCpDi" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	crossorigin="anonymous"></script>
+	<!-- Firebase Reference -->
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+	<!-- Moment.js Reference -->
+	<!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron text-center">
+			<h1>Anytime is Train Time</h1>
+			<p>I Choo Choo Choose You!</p>
+			<p><i>-Ralph Wiggum</i></p>
+			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/14/Ralph_Wiggum.png/200px-Ralph_Wiggum.png">
+		</div>
+		<div class="breadcrumb">
+			<h3 id="currentTime" class="text-center">
+			</h3>
+		</div>
+		<div class="panel panel-success">
+			<!-- Default panel contents -->
+			<div class="panel-heading">Current Train Schedule</div>
+
+			<!-- Table -->
+			<table class="table table-striped table-hover" id="tableHeader">
+				<thead>
+					<tr>
+						<th>Train Name</th>
+						<th>Destination</th>
+						<th>Frequency (min)</th>
+						<th>Next Arrival</th>
+						<th>Minutes Away</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h3 class="panel-title">Add Train</h3>
+			</div>
+			<div class="panel-body">
+				<form>
+					<div class="form-group">
+						<label for="trainName">Train Name</label>
+						<input type="text" class="form-control" id="trainName" placeholder="Train Name">
+					</div>
+					<div class="form-group">
+						<label for="destination">Destination</label>
+						<input type="text" class="form-control" id="destination" placeholder="City">
+					</div>
+					<div class="form-group">
+						<label for="firstTrainTime">First Train Time (HH:mm - Military Time)</label>
+						<input type="text" class="form-control" id="firstTrainTime" placeholder="Hour:Minutes">
+					</div>
+					<div class="form-group">
+						<label for="frequency">Frequency (min)</label>
+						<input type="text" class="form-control" id="frequency" placeholder="Miniutes">
+					</div>
+					<a href="#" class="btn btn-success" id="submit">Submit</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="assets/javascript/anytimeTrain.js" >
+</script>
+</body>
+</html>
